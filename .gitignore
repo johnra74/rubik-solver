@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dev-dist/
+build/
+coverage/
+playwright-report/
+test-results/
+*.log
+.env*
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+.claude/settings.local.json
