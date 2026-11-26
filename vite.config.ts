@@ -16,7 +16,8 @@ function cubejsThisFix(): Plugin {
 }
 
 export default defineConfig({
-  base: process.env.BASE_PATH ?? '/',
+  // Relative by default so the app (and its solver worker) works from any sub-path, e.g. GitHub Pages.
+  base: process.env.BASE_PATH || './',
   worker: { format: 'es', plugins: () => [cubejsThisFix()] },
   build: { target: 'es2022', chunkSizeWarningLimit: 700 },
   // The dev server pre-bundles dependencies with Rolldown, which doesn't run Vite `transform` hooks,
